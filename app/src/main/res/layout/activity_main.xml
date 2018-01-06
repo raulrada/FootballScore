@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.footballscore.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/field" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/logo"
+                        android:src="@drawable/steaua" />
+
+                    <TextView
+                        android:id="@+id/score_steaua"
+                        style="@style/text.score.vertical"
+                        android:layout_weight="1"
+                        android:text="@string/scoreSteaua" />
+
+                    <TextView
+                        style="@style/text.score.vertical"
+                        android:layout_weight="1"
+                        android:text="@string/hyphen" />
+
+                    <TextView
+                        android:id="@+id/score_real"
+                        style="@style/text.score.vertical"
+                        android:layout_weight="1"
+                        android:text="@string/scoreReal" />
+
+                    <ImageView
+                        style="@style/logo"
+                        android:src="@drawable/real" />
+
+                </LinearLayout>
+
+        
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

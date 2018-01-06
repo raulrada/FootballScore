@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Football Score</string>
+
+    <string name="scoreSteaua">0</string>
+    <string name="scoreReal">0</string>
+    <string name="hyphen">-</string>
+</resources>
