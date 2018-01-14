@@ -1,7 +1,25 @@
 <resources>
     <string name="app_name">Football Score</string>
 
-    <string name="scoreSteaua">0</string>
-    <string name="scoreReal">0</string>
+    <string name="textZero">0</string>
+    <string name="emptyText"></string>
+    <string name="nameSteaua">Steaua Bucuresti</string>
+
+    <string name="nameReal">Real Madrid</string>
+
+    <string name="teamStats">Team Stats</string>
+
     <string name="hyphen">-</string>
+    <string name="add">+</string>
+
+    <string name="fouls">Fouls</string>
+    <string name="shots">Shots</string>
+    <string name="shotsTarget">Shots on Target</string>
+    <string name="yellowCards">Yellow Cards</string>
+    <string name="redCards">Red Cards</string>
+    <string name="corners">Corners</string>
+    <string name="possession">Possession</string>
+    <string name="finish">Finish Match</string>
+    <string name="reset">Reset</string>
+
 </resources>

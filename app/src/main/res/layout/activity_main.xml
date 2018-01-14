@@ -11,47 +11,392 @@
         android:scaleType="centerCrop"
         android:src="@drawable/field" />
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/relative_layout_score"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+        <ImageView
+            style="@style/logo"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/steaua" />
 
-                    <ImageView
-                        style="@style/logo"
-                        android:src="@drawable/steaua" />
+        <TextView
+            android:id="@+id/hyphen"
+            style="@style/text.score.vertical"
+            android:layout_centerHorizontal="true"
+            android:text="@string/hyphen" />
 
-                    <TextView
-                        android:id="@+id/score_steaua"
-                        style="@style/text.score.vertical"
-                        android:layout_weight="1"
-                        android:text="@string/scoreSteaua" />
-
-                    <TextView
-                        style="@style/text.score.vertical"
-                        android:layout_weight="1"
-                        android:text="@string/hyphen" />
-
-                    <TextView
-                        android:id="@+id/score_real"
-                        style="@style/text.score.vertical"
-                        android:layout_weight="1"
-                        android:text="@string/scoreReal" />
-
-                    <ImageView
-                        style="@style/logo"
-                        android:src="@drawable/real" />
-
-                </LinearLayout>
-
-        
+        <TextView
+            android:id="@+id/score_steaua"
+            style="@style/text.score.vertical"
+            android:layout_toStartOf="@id/hyphen"
+            android:text="@string/textZero" />
 
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/score_real"
+            style="@style/text.score.vertical"
+            android:layout_toEndOf="@id/hyphen"
+            android:text="@string/textZero" />
+
+
+        <ImageView
+            style="@style/logo"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/real" />
+
+        <Button
+            style="@style/button.score"
+            android:id="@+id/add_goal_steaua"
+            android:layout_below="@id/score_steaua"
+            android:layout_toStartOf="@id/hyphen"
+            android:onClick="goalSteaua"
+            android:text="@string/add" />
+
+        <Button
+            style="@style/button.score"
+            android:id="@+id/add_goal_real"
+            android:layout_below="@id/score_real"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@id/hyphen"
+            android:onClick="goalReal"
+            android:text="@string/add" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_layout_score">
+
+        <TextView
+            style="@style/text.title.center"
+            android:text="@string/teamStats" />
+
+        <TextView
+            style="@style/text.title.left"
+            android:text="@string/nameSteaua" />
+
+        <TextView
+            style="@style/text.title.right"
+            android:text="@string/nameReal" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_line"
+        style="@style/line"
+        android:layout_below="@id/relative_layout_title" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/bottom_line"
+        android:layout_below="@id/title_line"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/shots" />
+
+                <TextView
+                    android:id="@+id/shots_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/shots_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_shots_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/shots_steaua"
+                    android:text="@string/add"
+                    android:onClick="shotSteaua"/>
+
+                <Button
+                    android:id="@+id/add_shots_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/shots_real"
+                    android:text="@string/add"
+                    android:onClick="shotReal"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/shotsTarget" />
+
+                <TextView
+                    android:id="@+id/shots_target_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/shots_target_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_shots_target_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/shots_target_steaua"
+                    android:onClick="shotTargetSteaua"
+                    android:text="@string/add" />
+
+                <Button
+                    android:id="@+id/add_shots_target_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/shots_target_real"
+                    android:onClick="shotTargetReal"
+                    android:text="@string/add" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/corners" />
+
+                <TextView
+                    android:id="@+id/corners_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/corners_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_corners_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/corners_steaua"
+                    android:onClick="cornerSteaua"
+                    android:text="@string/add" />
+
+                <Button
+                    android:id="@+id/add_corners_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/corners_real"
+                    android:onClick="cornerReal"
+                    android:text="@string/add" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/fouls" />
+
+                <TextView
+                    android:id="@+id/fouls_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/fouls_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_fouls_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/fouls_steaua"
+                    android:onClick="foulSteaua"
+                    android:text="@string/add" />
+
+                <Button
+                    android:id="@+id/add_fouls_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/fouls_real"
+                    android:onClick="foulReal"
+                    android:text="@string/add" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/yellowCards" />
+
+                <TextView
+                    android:id="@+id/yellow_cards_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/yellow_cards_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_yellow_cards_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/yellow_cards_steaua"
+                    android:onClick="yellowCardSteaua"
+                    android:text="@string/add" />
+
+                <Button
+                    android:id="@+id/add_yellow_cards_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/yellow_cards_real"
+                    android:onClick="yellowCardReal"
+                    android:text="@string/add" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:text="@string/redCards" />
+
+                <TextView
+                    android:id="@+id/red_cards_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/red_cards_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+                <Button
+                    android:id="@+id/add_red_cards_steaua"
+                    style="@style/button.regular"
+                    android:layout_toEndOf="@id/red_cards_steaua"
+                    android:onClick="redCardSteaua"
+                    android:text="@string/add" />
+
+                <Button
+                    android:id="@+id/add_red_cards_real"
+                    style="@style/button.regular"
+                    android:layout_toStartOf="@id/red_cards_real"
+                    android:onClick="redCardReal"
+                    android:text="@string/add" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/possession_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/text.regular.center"
+                    android:id="@+id/possession_title"
+                    android:text="@string/possession" />
+
+                <TextView
+                    android:id="@+id/possession_steaua"
+                    style="@style/text.regular.left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/textZero" />
+
+                <TextView
+                    android:id="@+id/possession_real"
+                    style="@style/text.regular.right"
+                    android:text="@string/textZero" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/emptyView" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/bottom_line"
+        style="@style/line"
+        android:layout_above="@id/relative_layout_reset" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/finish_match_button"
+            style="@style/buttonBig"
+            android:layout_alignParentStart="true"
+            android:onClick="finishMatch"
+            android:text="@string/finish" />
+
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/buttonBig"
+            android:layout_alignParentEnd="true"
+            android:onClick="reset"
+            android:text="@string/reset" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

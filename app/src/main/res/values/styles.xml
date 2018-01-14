@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -24,7 +24,59 @@
         <item name="android:layout_marginStart">@dimen/mStartText</item>
         <item name="android:layout_marginEnd">@dimen/mEndText</item>
         <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text.title">
+        <item name="android:textColor">@color/colorTitle</item>
+        <item name="android:layout_marginTop">@dimen/mTopTextTitle</item>
+        <item name="android:textSize">@dimen/textSizeTitle</item>
+        <item name="android:shadowColor">@color/text_shadow_color</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+
+    <style name="text.title.center">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="text.title.left">
+        <item name="android:layout_alignParentStart">true</item>
+
+    </style>
+
+    <style name="text.title.right">
+        <item name="android:layout_alignParentEnd">true</item>
+
+    </style>
+
+    <style name="text.regular">
+        <item name="android:textColor">@color/colorRegularText</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/textSizeRegular</item>
+    </style>
+
+    <style name="text.regular.center">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/textSizeRegularBold</item>
+        <item name="android:shadowColor">@color/text_shadow_color</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+
+    <style name="text.regular.left">
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginStart">@dimen/mStartTextRegular</item>
+    </style>
+
+    <style name="text.regular.right">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">@dimen/mEndTextRegular</item>
     </style>
 
     <style name="text.score">
@@ -33,9 +85,60 @@
     </style>
 
     <style name="text.score.vertical">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/mStartTextScore</item>
+        <item name="android:layout_marginEnd">@dimen/mEndTextScore</item>
+        <item name="android:layout_marginTop">@dimen/mTopTextScore</item>
+        <item name="android:layout_marginBottom">@dimen/mBottomTextScore</item>
     </style>
 
+
+    <style name="button">
+        <item name="android:layout_marginTop">@dimen/mTopButton</item>
+        <item name="android:layout_marginBottom">@dimen/mBottomButton</item>
+        <item name="android:layout_marginStart">@dimen/mStartButton</item>
+        <item name="android:layout_marginEnd">@dimen/mEndButton</item>
+        <item name="android:layout_width">@dimen/buttonWidth</item>
+        <item name="android:layout_height">@dimen/buttonWidth</item>
+        <item name="android:textSize">@dimen/textSizeRegular</item>
+    </style>
+
+    <style name="button.score">
+        <item name="android:textColor">@color/colorScore</item>
+        <item name="android:background">@drawable/transparent_button</item>
+    </style>
+
+    <style name="button.regular">
+        <item name="android:textColor">@color/colorRegularText</item>
+        <item name="android:background">@drawable/transparent_button</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="buttonBig">
+        <item name="android:layout_marginTop">@dimen/mTopButtonBig</item>
+        <item name="android:layout_marginBottom">@dimen/mBottomButtonBig</item>
+        <item name="android:layout_marginStart">@dimen/mStartButtonBig</item>
+        <item name="android:layout_marginEnd">@dimen/mEndButtonBig</item>
+        <item name="android:layout_width">@dimen/buttonBigWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSizeRegular</item>
+        <item name="android:textColor">@color/colorRegularText</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/transparent_button_big</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/mStartLine</item>
+        <item name="android:layout_marginEnd">@dimen/mEndLine</item>
+        <item name="android:layout_marginTop">@dimen/mTopLine</item>
+        <item name="android:layout_marginBottom">@dimen/mBottomLine</item>
+        <item name="android:background">@color/colorLine</item>
+    </style>
+
+    <style name="emptyView">
+        <item name="android:layout_height">@dimen/viewHeight</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
 
 </resources>

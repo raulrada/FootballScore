@@ -4,8 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorScore">#FFC107</color>
+    <color name="colorScore">#EF6C00</color>
 
+    <color name="colorTitle">#EF6C00</color>
 
+    <color name="colorLine">#FFC107</color>
+
+    <color name="colorRegularText">#EF6C00</color>
+
+    <color name="text_shadow_color">#3a8ac4</color>
+
+    <color name="transparent_color">#00ffffff</color>
 
 </resources>

@@ -3,17 +3,49 @@
     <dimen name="logoWidth">80dp</dimen>
     <dimen name="logoHeight">80dp</dimen>
     <dimen name="mTopLogo">5dp</dimen>
-    <dimen name="mBottomLogo">5dp</dimen>
-    <dimen name="mStartLogo">5dp</dimen>
-    <dimen name="mEndLogo">5dp</dimen>
+    <dimen name="mBottomLogo">0dp</dimen>
+    <dimen name="mStartLogo">10dp</dimen>
+    <dimen name="mEndLogo">10dp</dimen>
 
-    <dimen name="mTopText">5dp</dimen>
+    <dimen name="mTopText">0dp</dimen>
     <dimen name="mBottomText">5dp</dimen>
-    <dimen name="mStartText">5dp</dimen>
-    <dimen name="mEndText">5dp</dimen>
+    <dimen name="mStartText">15dp</dimen>
+    <dimen name="mEndText">15dp</dimen>
+
+    <dimen name="mStartTextRegular">22dp</dimen>
+    <dimen name="mEndTextRegular">22dp</dimen>
+
+    <dimen name="mStartTextScore">15dp</dimen>
+    <dimen name="mEndTextScore">15dp</dimen>
+    <dimen name="mTopTextScore">20dp</dimen>
+    <dimen name="mBottomTextScore">5dp</dimen>
+
+    <dimen name="mTopTextTitle">10dp</dimen>
+
+    <dimen name="mStartLine">10dp</dimen>
+    <dimen name="mEndLine">10dp</dimen>
+    <dimen name="mTopLine">0dp</dimen>
+    <dimen name="mBottomLine">5dp</dimen>
+
+    <dimen name="mTopButton">0dp</dimen>
+    <dimen name="mBottomButton">0dp</dimen>
+    <dimen name="mStartButton">0dp</dimen>
+    <dimen name="mEndButton">0dp</dimen>
+    <dimen name="buttonWidth">48dp</dimen>
+    <dimen name="buttonHeight">48dp</dimen>
+
+    <dimen name="mTopButtonBig">10dp</dimen>
+    <dimen name="mBottomButtonBig">10dp</dimen>
+    <dimen name="mStartButtonBig">10dp</dimen>
+    <dimen name="mEndButtonBig">10dp</dimen>
+    <dimen name="buttonBigWidth">140dp</dimen>
+
 
     <dimen name="textSizeScore">30sp</dimen>
-    <dimen name="textSizeTitle">40sp</dimen>
-    <dimen name="textSizeRegular">15sp</dimen>
+    <dimen name="textSizeTitle">15sp</dimen>
+    <dimen name="textSizeRegular">20sp</dimen>
+    <dimen name="textSizeRegularBold">17sp</dimen>
+
+    <dimen name="viewHeight">5dp</dimen>
 
 </resources>
